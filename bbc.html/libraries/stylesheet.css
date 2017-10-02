@@ -1,0 +1,28 @@
+body {margin:0; padding: 0;}
+header {width: 100%;}
+main {width: 100%;}
+footer {width: 100%;}
+ul {margin: 0; padding: 0; list-style: nome;}
+nav {float: left; width: 100%; background: #FA5858; font-weight: bold; font-family: Verdana, sans-serif;}
+nav li{float: left;}
+
+
+
+/*Para Smatphone*/
+@media only screen and (max-width: 480px) {
+nav{height: 50px;}
+nav li{width: 100%;}
+}
+
+/* Para Tablet*/
+
+@media only screen and (max-width: 481px) {
+nav{height: 80px;}
+nav li{width: 100%;}
+}
+
+/*Para Desktop*/
+@media only screen and (max-width: 769px) {
+nav{height: 100px;}
+nav li{width: 20%;}
+}
