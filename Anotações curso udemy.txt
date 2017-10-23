@@ -1,0 +1,150 @@
+#Exemplo palavra magica
+<html>
+    <head>  
+        <title>Javascript</title>
+    </head>
+    <body>
+		<p>Qual a palavra magica?</p>
+		<p><input type="text" id="magicWord"></p>
+		<p><button id="checkMagicWord">Enter</button></p>
+        <script type="text/javascript">
+			document.getElementById("checkMagicWord").onclick = function() {
+				var magicWordEntered = document.getElementById("magicWord").value;
+				var magicWord = 'abracadabra';
+				if (magicWordEntered == magicWord) {
+					alert("Palavra correta");
+				} else {
+					alert("Palavra errada");
+				}
+			}      
+        </script>
+    </body>
+</html>
+
+
+
+#Exemplo jogo acerto dos numeros
+<html>
+    <head>  
+        <title>Javascript</title>
+    </head>
+    <body>
+        <p>How many fingers am I holding up?</p>
+        <p><input type="text" id="guess"> <button id="checkGuess">Guess!</button></p>
+        <script type="text/javascript">
+            document.getElementById("checkGuess").onclick = function() {
+                var randomNumber = Math.random();
+                randomNumber = randomNumber * 6;
+                randomNumber = Math.floor(randomNumber);
+                if (document.getElementById("guess").value == randomNumber) {
+                    alert("Well done! You got it!");
+                } else {
+                    alert("Nope! The number was " + randomNumber);
+                }
+            }            
+        </script>
+    </body>
+</html>
+
+
+
+
+#Exemplo de Looping
+A)
+<html>
+    <head>  
+        <title>Javascript</title>
+    </head>
+    <body>
+        <div id="tweetDiv"></div>
+        <script type="text/javascript">
+            var tweetString = "";
+            var tweets = ["Hi everyone!", "I love cornflakes!", "Night night :)", "Sweet dreams!"];
+            for (var i = 0; i < tweets.length; i++) {
+                tweetString = tweetString + "<p>" + tweets[i] + "</p>";
+            }
+            document.getElementById("tweetDiv").innerHTML = tweetString;
+        </script>
+    </body>
+</html>
+
+
+B)
+<html>
+	<head>
+    	<title>For Loops</title>
+    </head>
+    <body>
+    	<p id="colourList"></p>
+          <script type="text/javascript">
+            var colours = ["Red", "Yellow", "Blue"];
+			var text = "";
+			var i;
+			for (i = 0; i < colours.length; i++) {
+    			text += colours[i] + " ";
+			}
+			document.getElementById("colourList").innerHTML = text;
+      	</script>
+    </body>
+</html>
+
+
+#Exemple While Loops
+<html>
+    <head>  
+        <title>Javascript</title>
+    </head>
+    <body>
+        <p>How many fingers are you holding up?</p>
+        <p>
+            <select id="myNumber">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <button id="guess">Guess!</button>
+        </p>
+        <script type="text/javascript">
+            document.getElementById("guess").onclick = function() {
+                var myNumber = document.getElementById("myNumber").value;
+                var gotIt = false;
+                var numberOfGuesses = 1;
+                while (gotIt == false) {
+                    var guess = Math.random();
+                    guess = guess * 6;
+                    guess = Math.floor(guess);
+                    if (guess == myNumber) {
+                        gotIt = true;
+                        alert ("Got it! It was a " + guess + ". It took me " + numberOfGuesses + " guesses.");
+                    } else {
+                        numberOfGuesses++;
+                    }
+                }
+            }
+        </script>        
+    </body>
+</html>
+
+
+#validar se o jQuery está funcionando
+<html>
+	<head>
+			<title>jQuery start</title>
+		<script>
+			src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js">
+		</script>
+	</head>
+	<body>
+		Hi there!
+		<script type="text/javascript">
+			if (typeof jQuery == "underfined!") {
+				alert("jQuery is not installed!");
+			} else {
+				alert("jQuery is installed correctly!");
+			}
+		</script>
+	</body>
+</html>
